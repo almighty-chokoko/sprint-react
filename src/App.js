@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Example from './components/Example'
+
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
@@ -14,6 +16,15 @@ const Hello=(word)=>{
     <h1>Hello {phrase}</h1>
   )
 }
+
+function User(name,id){
+  this.name=name;
+  this.id=id;
+  this.avatar='photo';
+}
+
+var John = new User("John",25);
+
 
 const PrintFullName=(props)=>{
   return (
@@ -30,9 +41,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
+          <Example/>
           <a
             className="App-link"
             href="https://reactjs.org"
